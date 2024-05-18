@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:expandable/expandable.dart';
 
 class PestSolutionsScreen extends StatelessWidget {
   const PestSolutionsScreen({Key? key}) : super(key: key);
@@ -7,7 +8,7 @@ class PestSolutionsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 0, 255, 34),
+        backgroundColor: const Color.fromARGB(255, 0, 165, 22),
         title: const Text(
           'Pest Solutions',
           style: TextStyle(
@@ -67,66 +68,91 @@ class PestSolutionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: const Color.fromARGB(255, 60, 255, 67),
-      elevation: 4.0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15.0),
-      ),
+    return ExpandableNotifier(
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              pestName,
-              style: const TextStyle(
-                fontSize: 22.0,
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 3, 0, 33),
+        padding: const EdgeInsets.only(bottom: 16.0),
+        child: Card(
+          color: const Color.fromARGB(255, 60, 255, 67),
+          elevation: 4.0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          child: ScrollOnExpand(
+            child: ExpandablePanel(
+              theme: const ExpandableThemeData(
+                tapBodyToExpand: true,
+                tapBodyToCollapse: true,
+                hasIcon: true,
               ),
-            ),
-            const SizedBox(height: 10.0),
-            Image.asset(
-              imagePath,
-              height: 200,
-              fit: BoxFit.cover,
-            ),
-            const SizedBox(height: 10.0),
-            const Divider(color: Colors.black54),
-            Text(
-              "Description",
-              style: const TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 5.0),
-            Text(
-              description,
-              style: const TextStyle(fontSize: 16.0),
-            ),
-            const SizedBox(height: 10.0),
-            const Divider(color: Colors.black54),
-            Text(
-              "Solutions",
-              style: const TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 5.0),
-            ...solutions.map((solution) => Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: Text(
-                    solution,
-                    style: const TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
+              header: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  pestName,
+                  style: const TextStyle(
+                    fontSize: 22.0,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 3, 0, 33),
                   ),
-                )),
-          ],
+                ),
+              ),
+              collapsed: Column(
+                children: [
+                  Image.asset(
+                    imagePath,
+                    height: 200,
+                    fit: BoxFit.cover,
+                  ),
+                  const SizedBox(height: 10.0),
+                ],
+              ),
+              expanded: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image.asset(
+                      imagePath,
+                      height: 200,
+                      fit: BoxFit.cover,
+                    ),
+                    const SizedBox(height: 10.0),
+                    const Divider(color: Colors.black54),
+                    Text(
+                      "Description",
+                      style: const TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      description,
+                      style: const TextStyle(fontSize: 16.0),
+                    ),
+                    const SizedBox(height: 10.0),
+                    const Divider(color: Colors.black54),
+                    Text(
+                      "Solutions",
+                      style: const TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 5.0),
+                    ...solutions.map((solution) => Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 4.0),
+                          child: Text(
+                            solution,
+                            style: const TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        )),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ),
       ),
     );
