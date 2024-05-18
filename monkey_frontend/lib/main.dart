@@ -31,3 +31,5 @@ class MyApp extends StatelessWidget {
         home: SplashScreenNew());
   }
 }
+
+//run----------------------------------------------------------------
