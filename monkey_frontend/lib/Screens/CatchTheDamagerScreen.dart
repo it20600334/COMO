@@ -191,7 +191,7 @@ class _CatchTheDamagerScreenState extends State<CatchTheDamagerScreen> {
               ElevatedButton(
                 onPressed: pickImageCamera,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 60, 255, 67),
+                  backgroundColor: Color.fromRGBO(4, 162, 4, 1),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                   shape: RoundedRectangleBorder(
@@ -210,7 +210,7 @@ class _CatchTheDamagerScreenState extends State<CatchTheDamagerScreen> {
               ElevatedButton(
                 onPressed: pickImageGallery,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 60, 255, 67),
+                  backgroundColor: Color.fromRGBO(4, 162, 4, 1),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                   shape: RoundedRectangleBorder(
