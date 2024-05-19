@@ -60,7 +60,7 @@ class _VisualizationScreenState extends State<VisualizationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 3, 0, 33),
+        backgroundColor: const Color.fromARGB(255, 3, 33, 0),
         automaticallyImplyLeading: false,
         leading: IconButton(
           icon: const Icon(
@@ -148,15 +148,16 @@ class _VisualizationScreenState extends State<VisualizationScreen> {
                   series: <LineSeries>[
                     LineSeries<ChartData, DateTime>(
                       dataSource: chartData
-                        .where((data) => data.date.month == selectedMonthHumidity)
-                        .toList(), // Filter data for the selected month
+                          .where((data) =>
+                              data.date.month == selectedMonthHumidity)
+                          .toList(), // Filter data for the selected month
                       xValueMapper: (ChartData data, _) => data.date,
                       yValueMapper: (ChartData data, _) => data.humidity,
                       dataLabelSettings: DataLabelSettings(isVisible: false),
                     )
                   ],
                   primaryXAxis: DateTimeAxis(
-                    dateFormat: DateFormat("d MMM"), 
+                    dateFormat: DateFormat("d MMM"),
                   ),
                   primaryYAxis: NumericAxis(
                     minimum: 20,
@@ -184,39 +185,39 @@ class _VisualizationScreenState extends State<VisualizationScreen> {
               DropdownButton<int>(
                 value: selectedMonthTemperature,
                 onChanged: (int? newValue) {
-                setState(() {
-                  selectedMonthTemperature = newValue!;
-                });
-              },
-              items: [
-                DropdownMenuItem<int>(
-                  value: DateTime.january,
-                  child: Text(
-                    'January',
-                    style: TextStyle(
-                      color: Colors.black,
+                  setState(() {
+                    selectedMonthTemperature = newValue!;
+                  });
+                },
+                items: [
+                  DropdownMenuItem<int>(
+                    value: DateTime.january,
+                    child: Text(
+                      'January',
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
                     ),
                   ),
-                ),
-                DropdownMenuItem<int>(
-                  value: DateTime.february,
-                  child: Text(
-                    'February',
-                    style: TextStyle(
-                      color: Colors.black,
+                  DropdownMenuItem<int>(
+                    value: DateTime.february,
+                    child: Text(
+                      'February',
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
                     ),
                   ),
-                ),
-                DropdownMenuItem<int>(
-                  value: DateTime.march,
-                  child: Text(
-                    'March',
-                    style: TextStyle(
-                      color: Colors.black,
+                  DropdownMenuItem<int>(
+                    value: DateTime.march,
+                    child: Text(
+                      'March',
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
                     ),
                   ),
-                ),
-                // Add more months as needed
+                  // Add more months as needed
                 ],
               ),
             ],
@@ -231,7 +232,8 @@ class _VisualizationScreenState extends State<VisualizationScreen> {
                   series: <ColumnSeries>[
                     ColumnSeries<ChartData, String>(
                       dataSource: chartData
-                          .where((data) => data.date.month == selectedMonthTemperature)
+                          .where((data) =>
+                              data.date.month == selectedMonthTemperature)
                           .toList(), // Filter data for the selected month
                       xValueMapper: (ChartData data, _) =>
                           DateFormat('dd MMM').format(data.date),
@@ -266,7 +268,7 @@ class _VisualizationScreenState extends State<VisualizationScreen> {
                 color: Colors.white, //other icon color
                 activeColor: Colors.white, //Active icon color
                 //tab
-                tabBackgroundColor: Color.fromARGB(255, 44, 50, 102),
+                tabBackgroundColor: Color.fromARGB(255, 44, 102, 44),
                 gap: 8,
                 onTabChange: (index) {
                   print(index);

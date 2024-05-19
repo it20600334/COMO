@@ -106,7 +106,7 @@ class _CatchTheDamagerScreenState extends State<CatchTheDamagerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 0, 165, 22),
+        backgroundColor: const Color.fromRGBO(0, 206, 27, 1),
         title: const Text(
           'Catch the Damager',
           style: TextStyle(
@@ -191,13 +191,18 @@ class _CatchTheDamagerScreenState extends State<CatchTheDamagerScreen> {
               ElevatedButton(
                 onPressed: pickImageCamera,
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  backgroundColor: Color.fromARGB(255, 60, 255, 67),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(13),
                   ),
                   foregroundColor: Colors.black,
                 ),
-                child: const Text("Take a Photo"),
+                child: const Text("Take a Photo",
+                    style: TextStyle(
+                      color: Colors.white,
+                    )),
               ),
               const SizedBox(
                 height: 8,
@@ -205,13 +210,18 @@ class _CatchTheDamagerScreenState extends State<CatchTheDamagerScreen> {
               ElevatedButton(
                 onPressed: pickImageGallery,
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  backgroundColor: Color.fromARGB(255, 60, 255, 67),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(13),
                   ),
                   foregroundColor: Colors.black,
                 ),
-                child: const Text("Pick from gallery"),
+                child: const Text("Pick from gallery",
+                    style: TextStyle(
+                      color: Colors.white,
+                    )),
               ),
             ],
           ),

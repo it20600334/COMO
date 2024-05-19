@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 165, 22),
+        backgroundColor: Color.fromRGBO(0, 206, 27, 1),
         automaticallyImplyLeading: false,
         leading: IconButton(
           icon: const Icon(
@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.bold),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 0, 165, 22),
+                  backgroundColor: Color.fromRGBO(0, 206, 27, 1),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                 ),
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.bold),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 0, 165, 22),
+                  backgroundColor: Color.fromRGBO(0, 206, 27, 1),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                 ),
@@ -118,7 +118,7 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.bold),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 0, 165, 22),
+                  backgroundColor: Color.fromRGBO(0, 206, 27, 1),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                 ),
@@ -145,7 +145,7 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.bold),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 0, 165, 22),
+                  backgroundColor: Color.fromRGBO(0, 206, 27, 1),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                 ),
@@ -172,7 +172,7 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.bold),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 0, 165, 22),
+                  backgroundColor: Color.fromRGBO(0, 206, 27, 1),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                 ),
@@ -197,7 +197,7 @@ class _HomePageState extends State<HomePage> {
       //           color: Colors.white, //other icon color
       //           activeColor: Colors.white, //Active icon color
       //           //tab
-      //           tabBackgroundColor: Color.fromARGB(255, 44, 50, 102),
+      //           tabBackgroundColor: Color.fromARGB(255, 44, 102, 44),
       //           gap: 8,
       //           onTabChange: (index) {
       //             print(index);

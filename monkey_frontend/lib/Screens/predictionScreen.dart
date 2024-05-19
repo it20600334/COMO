@@ -37,7 +37,7 @@ class _PredictionScreenState extends State<PredictionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 3, 0, 33),
+        backgroundColor: const Color.fromARGB(255, 3, 33, 0),
         automaticallyImplyLeading: false,
         leading: IconButton(
           icon: const Icon(
@@ -122,7 +122,7 @@ class _PredictionScreenState extends State<PredictionScreen> {
                 color: Colors.white, //other icon color
                 activeColor: Colors.white, //Active icon color
                 //tab
-                tabBackgroundColor: Color.fromARGB(255, 44, 50, 102),
+                tabBackgroundColor: Color.fromARGB(255, 44, 102, 44),
                 gap: 8,
                 onTabChange: (index) {
                   print(index);

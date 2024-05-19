@@ -8,7 +8,7 @@ class PestSolutionsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 0, 165, 22),
+        backgroundColor: const Color.fromRGBO(0, 206, 27, 1),
         title: const Text(
           'Pest Solutions',
           style: TextStyle(
@@ -91,7 +91,7 @@ class PestSolutionCard extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 22.0,
                     fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 3, 0, 33),
+                    color: Color.fromARGB(255, 3, 33, 0),
                   ),
                 ),
               ),
